@@ -1,0 +1,125 @@
+\documentclass[11pt,letterpaper,boxed]{pset}
+
+\usepackage[margin=0.75in]{geometry}
+\usepackage{ulem}
+
+\name{Name: \rule{2.5cm}{0.15mm}}
+\assignment{Box \# \rule{1.5cm}{0.15mm}}
+\class{MATH065 HW11}
+\duedate{6 June 2019}
+
+
+\begin{document}
+\problemlist{MATH065 HW11}
+
+\begin{problem} [Exercise 1.]
+    ({\bf The Lorenz Equations}) Earlier you showed $(0,0,0)$ is an  equilibrium point for the Lorenz system
+    
+    \begin{eqnarray*}
+        x' & = & \sigma ( y - x) \\
+        y' & = & r x - y - x z \\
+        z'  & = & -\beta z + x y
+    \end{eqnarray*}
+    
+    for all $r > 0$. By calculating the eigenvalues of the Jacobian at the origin, show that the origin is {\it asymptotically stable} for $0<r<1$ and {\it unstable} for $r>1$.  Hint: Block diagonal matrices are nice because they reduce our calculations to the blocks (which are invariant subspaces).
+    
+    \textbf{Note:} The Lorenz equations are an important model in chaos theory. The system was derived in the context of a model for thermal convection (it was from this model that Lorenz coined the term ``the butterfly effect" -- more on Thursday!). 
+\end{problem}
+\newpage
+
+\begin{problem} [Exercise 2.]
+    
+    Consider the Predator-Prey model (where $a,b,c,d > 0$):
+    
+    \begin{eqnarray*}
+    \dot{x} & = & ax - b xy \\
+    \dot{y}  & = & c xy - d y 
+    \end{eqnarray*}
+    
+    \begin{enumerate}
+        \item[(a)] Which state is the predator and which the prey?
+        \item[(b)] Show the system has a conserved quantity.
+        \item[(c)] Use a graphing tool to plot the level curves of the conserved quantity in the relevant biological region (i.e., $x,y \geq 0$).  You can assume $a=b=c=d=1$ for the purposes of graphing. 
+    \end{enumerate}
+\end{problem}
+\newpage
+
+\begin{problem} [Exercise 3.]
+    (\textbf{Hamiltonian Systems}) Let $H:\R^{2n} \to \R$ be a differentiable real-valued function. A Hamiltonian system for $H$ is defined by the following system of $2n$ first-order equations:
+    $$\dot{p_i}(t) = -{\partial H \over \partial q_i}(p_1,\ldots,p_n,q_1,\ldots,q_n) \qquad i = 1,\dots, n;$$
+    $$\dot{q_i}(t) = {\partial H \over \partial p_i}(p_1,\ldots,p_n,q_1,\ldots,q_n)  \qquad i = 1,\dots, n.$$
+    $H$ is called the Hamiltonian or "total energy" and the equations for $p$ and $q$ are called Hamilton's equations.
+    
+    \begin{enumerate}
+        \item[(a)] When $n=1$ we have $H = H(p,q)$ with associated  system $\displaystyle \dot{p}  =   -\frac{\partial H}{\partial q}$ and $ \displaystyle \dot{q}  =   \frac{\partial H}{\partial p} $.  Show any such $H(p,q)$ is a conserved quantity for this system (hence the trajectories lie on level curves of $H$). 
+        \item[(b)] In general,  $H = H(p_1, ..., p_n, q_1, ..., q_n)$. Use the chain rule and Hamilton's equations to show any such  $H$ is a conserved quantity for the system (hence trajectories lie on level surfaces of $H(\mathbf{p},\mathbf{q})=C$ in $\R^{2n}$).  
+    \end{enumerate}
+    
+    \noindent
+    \textbf{Note:}  Hamiltonian systems are important in mechanics where $q_i$ and $p_i$ represent particle positions and momenta respectively, and your calculation shows that the dynamics evolve on a level surface of the Hamiltonian.  For example, the harmonic oscillator $m \ddot{x} + k x = 0$ is a Hamiltonian system where $H(p,q)=\frac{k}{2} q^2 + \frac{1}{2m} p^2$, which represents the total energy of the system.  See Stat Mech (Phys 117) \& Theo Mech (Phys 111) for more!
+\end{problem}
+\newpage
+
+\begin{problem} [Exercise 4.]
+    Duffing's equation 
+    
+    \[ \ddot{u}+ u^3 - u = 0  \] 
+    
+    is an important model for phenomena governed by a double-well potential.  
+    
+    \begin{enumerate}
+        \item[(a)] Write this equation as an equivalent system, plot the nullclines, and determine all equilibrium points.
+        \item[(b)] Determine the linear stability for each equilibrium point and indicate whether the linear stability is guaranteed to be accurate or not (as per the Hartman-Grobman Theorem). 
+        \item[(c)] Determine a conserved quantity for the system and use a graphing tool to generate a level curve plot. 
+        \item[(d)] Use your information gathered to sketch a reasonably accurate phase portrait; be sure to put arrowheads on your orbits to indicate the direction of flow with increasing time. 
+    \end{enumerate}
+\end{problem}
+\newpage
+
+\begin{problem} [Exercise 5.]
+    Consider the damped Duffing equation
+    
+    \[ \ddot{u} + c \dot{u} + u^3 - u = 0  \] 
+    
+    for $c > 0$.  What changes for your answers to the previous exercise?  For part (c) show that the conserved quantity for the undamped case is no longer a conserved quantity. 
+\end{problem}
+\newpage
+
+\begin{problem} [Exercise 6.]
+    (\textbf{Limit Cycles})
+    Consider the system (written in polar coordinates):
+    
+    \begin{eqnarray*}
+        r' & = &  r(r-1)(2-r^2) \\
+         \theta' & = &  -3.
+    \end{eqnarray*}
+    
+    The origin $r=0$ is the only equilibrium point. Sketch the phase portrait in the $x$-$y$-plane and identify any limit cycles.
+\end{problem}
+\newpage
+
+
+\begin{problem} [Exercise 7.]
+    (\textbf{Limit Cycles}) Consider the system (written in polar coordinates):
+    
+    \begin{eqnarray*}
+        r' &  = &  r(1-r^2)(4-r^2)  \\
+        \theta'  & = &  1-r^2
+    \end{eqnarray*}
+    
+    \begin{itemize}
+        \item[(a)] Find the equilibrium point(s).   
+        \item[(b)] Sketch the phase portrait in the $x$-$y$-plane and identify any limit cycles. 
+        \item[(c)] Is the equilibrium point at the origin asymptotically stable, stable, or unstable?
+    \end{itemize}
+\end{problem}
+\newpage
+
+\end{document}
+
+
+
+
+
+
+

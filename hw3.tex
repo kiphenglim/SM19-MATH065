@@ -1,0 +1,100 @@
+\documentclass[11pt,letterpaper,boxed]{pset}
+
+\usepackage[margin=0.75in]{geometry}
+\usepackage{ulem}
+
+\name{Name: \rule{2.5cm}{0.15mm}}
+\assignment{Box \# \rule{1.5cm}{0.15mm}}
+\class{MATH065 HW3}
+
+\begin{document}
+
+    \problemlist{MMATH065 HW3}
+    \begin{center}
+        6.3: 16, 22 \\
+        6.4: 20, 24, 32 \\
+        (6.5) 4, 28, 34
+    \end{center}
+    
+    \begin{problem} [6.3 \#16]
+    Let $\mathscr{B}$ and $\mathscr{C}$ be bases for $\mathscr{P}_2$. If $\mathscr{B} = \left\{x,\; 1+x,\; 1-x+x^2\right\}\;$ and the change-of-basis matrix from $\mathscr{B}$ to $\mathscr{C}$ is 
+    $$P_{\mathscr{C} \xleftarrow{} \mathscr{B}} = 
+    \begin{bmatrix}
+        1 & 0 & 0 \\
+        0 & 2 & 1 \\
+        -1& 1 & 1 
+    \end{bmatrix}$$
+    find $\mathscr{C}$.
+    \end{problem}
+    \newpage
+    
+    
+    \begin{problem} [6.3 \#22]
+    Let $V$ be an $n$-dimensional vector space with basis $\mathscr{B}= \left\{\textbf{v}_1, ..., \textbf{v}_n\right\}$. Let $P$ be an invertible $n\times n$ matrix and set 
+    $$\textbf{u}_i = p_{1i}\textbf{v}_i + ... + p_{ni} \textbf{v}_i $$
+    for $i=1, ..., n$. Prove that $\mathscr{C}=\left\{\textbf{u}_1, ..., \textbf{u}_n\right\}$ is a basis for $V$ and show that $P=P_{\mathscr{B}\xleftarrow{}\mathscr{C}}$.
+    \end{problem}
+    \newpage
+    
+    
+    \begin{problem} [6.4 \#20]
+    Show that there is no linear transformation $T:\mathbb{R}^3\xrightarrow{} \mathscr{P}_2$ such that
+    $$T\begin{bmatrix}2\\1\\0\end{bmatrix}= 1+x, \; T\begin{bmatrix}3\\0\\2\end{bmatrix}=2-x+x^2, \; T\begin{bmatrix}0\\6\\-8 \end{bmatrix}=-2+2x^2$$
+    \end{problem}
+    \newpage
+    
+    \begin{problem} [6.4 \#24]
+    Let $\textbf{\textbf{v}}_1, ..., \textbf{v}_n$ be vectors n a vector space $V$ and let $T: V\xrightarrow{} W$ be a linear transformation.
+    
+    \begin{enumerate} [(a)]
+        \item If $\left\{T(\textbf{v}_1), ..., T(\textbf{v}_n)\right\}$ is linearly independent in $W$, show that $\left\{\textbf{v}_1, ..., \textbf{v}_n\right\}$ is linearly independent in $V$.
+        \item Show the converse of (a) is false. That is, it is not necessarily true that if $\left\{\textbf{v}_1, ..., \textbf{v}_n\right\}$ is linearly independent in $V$, then $\left\{T(\textbf{v}_1),\: ...\: ,\:T(\textbf{v}_n)\right\}$ is linearly independent in $W$. Illustrate this with an example $T: \mathbb{R}^2\xrightarrow{}\mathbb{R}^2$.
+    \end{enumerate}
+    
+    \end{problem}
+    \newpage
+    
+    
+    \begin{problem} [6.4 \#32]
+    Let $T:V\xrightarrow{}V$ be a linear transformation such that $T\circ T = I$.
+    
+    \begin{enumerate} [(a)]
+        \item Show that $\{\textbf{v},T(\textbf{v})\}$ is linearly dependent if and only if $T(\textbf{v}) = \pm \textbf{v}$.
+        \item Give an example of such a linear transformation with $V=\mathbb{R}^2$.
+    \end{enumerate}
+    
+    \end{problem}
+    \newpage
+    
+    \begin{problem} [6.5 \#4]
+    Let $T:\mathscr{P}_2 \xrightarrow{} \mathscr{P}_2$ be the linear transformation defined by $T(p(x))\;=\;xp`(x)$.
+    
+    \begin{enumerate} [(a)]
+        \item Which, if any, of the following polynomials are in ker($T$)?
+        \begin{enumerate} [(i)]
+            \item 1
+            \item $x$
+            \item $x^2$
+        \end{enumerate}
+        \item Which, if any, of the polynomials in part (a) are in range($T$)?
+        \item Describe ker($T$) and range($T$).
+    \end{enumerate}
+    \end{problem}
+    \newpage
+    
+    \begin{problem} [6.5 \#28]
+    Show that $T:\mathscr{P}_n \xrightarrow{} \mathscr{P}_n$ defined by $T(p(x)) = p(x-2)$ is an isomorphism.
+    \end{problem}
+    \newpage
+    
+    \begin{problem} [6.5 \#34]
+    Let $S: V \xrightarrow{} W$ and $T: U \xrightarrow{} V$ be linear transformations.
+    
+    \begin{enumerate} [(a)]
+        \item Prove that if $S \circ T$ is one-to-one, so is $T$.
+        \item Prove that if $S \circ T$ is onto, so is $S$.
+    \end{enumerate}
+    \end{problem}
+    \newpage
+
+\end{document}

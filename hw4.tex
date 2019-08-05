@@ -1,0 +1,99 @@
+\documentclass[11pt,letterpaper,boxed]{pset}
+
+\usepackage[margin=0.75in]{geometry}
+\usepackage{ulem}
+
+\name{Name: \rule{2.5cm}{0.15mm}}
+\assignment{Box \# \rule{1.5cm}{0.15mm}}
+\class{MATH065 HW4}
+
+\begin{document}
+
+    \problemlist{MATH065 HW4}
+    \begin{center}
+         6.6: 2, 4, 12, 14, 18, 22, 32, 34
+    \end{center}
+    
+    \begin{problem} [6.6 \#2]
+    Find the matrix $[T]_{\mathscr{C}\xleftarrow{}\mathscr{B}}$ of the linear transformation $T: V \xrightarrow{} W $ with respect to bases $\mathscr{B}$ and $\mathscr{C}$ of $V$ and $W$, respectively. Verify \textit{Theorem 6.26} for the vector \textbf{v} by computing $T(\textbf{v})$ directly and using the theorem.
+    
+    \[T: \mathscr{P}_1 \xrightarrow{} \mathscr{P}_1 \text{ defined by} \]
+    \[T(a+bx) = b- a x, \mathscr{B}=\{1+x,\; 1-x\},\; \mathscr{C}=\{1,\; x\}, \textbf{v}=p(x)=4+2x\]
+    
+    \end{problem}
+    \newpage
+    
+    \begin{problem} [6.6 \#4]
+    Find the matrix $[T]_{\mathscr{C}\xleftarrow{}\mathscr{B}}$ of the linear transformation $T: V \xrightarrow{} W $ with respect to bases $\mathscr{B}$ and $\mathscr{C}$ of $V$ and $W$, respectively. Verify \textit{Theorem 6.26} for the vector \textbf{v} by computing $T(\textbf{v})$ directly and using the theorem.
+    
+    \[T: \mathscr{P}_2 \xrightarrow{} \mathscr{P}_2 \text{ defined by}\] 
+    \[T(p(x)) = p(x+2), \mathscr{B}=\left\{1,  \: x+2,  \: (x+2)^2\right\},  \: \mathscr{C}=\left\{1,  \: x,   \: x^2\right\}, \textbf{v}=p(x)=a+bx+cx^2\]
+    
+    \end{problem}
+    \newpage
+    
+    
+    \begin{problem} [6.6 \#12]
+    Find the matrix $[T]_{\mathscr{C}\xleftarrow{}\mathscr{B}}$ of the linear transformation $T: V \xrightarrow{} W $ with respect to bases $\mathscr{B}$ and $\mathscr{C}$ of $V$ and $W$, respectively. Verify \textit{Theorem 6.26} for the vector \textbf{v} by computing $T(\textbf{v})$ directly and using the theorem.
+    
+    \[T: M_{22} \xrightarrow{} M_{22} \text{ defined by}\]
+    \[T(A) = A - A^T, \mathscr{B}=\mathscr{C}=\left\{E_{11},\;E_{12},\;E_{21},\;E_{22}\right\}, \textbf{v}=A=\begin{bmatrix}a&b\\c&d\end{bmatrix} \]
+    
+    \end{problem}
+    \newpage
+    
+    
+    \begin{problem} [6.6 \#14]
+    Consider the subspace $W$ of $\mathscr{D}$, given by $W=\textrm{span}\left(e^{2x},\: e^{-2x}\right)$.
+    \begin{enumerate} [(a)]
+        \item Show that the differential operator $D$ maps $W$ into itself.
+        \item Find the matrix of $D$ with respect to $\mathscr{B}=\left\{e^{2x},\:e^{-2x}\right\}$.
+        \item Compute the derivative of $f(x) = e^{2x} - 3e^{-2x}$ indirectly, using \textit{Theorem 6.26} and verify it agrees with $f`(x)$ as computed directly.
+    \end{enumerate}
+    
+    \end{problem}
+    \newpage
+    
+    
+    
+    \begin{problem} [6.6 \# 18]
+    $T: U \xrightarrow{} V $ and $S: V \xrightarrow{} W $  are linear transformations and $\mathscr{B,\:C,\: \textrm{and}\: D}$ are bases for $U,\:V,\: \textrm{and }W$, respectively. Compute $[S\circ T]_{\mathscr{D}\xleftarrow{}\mathscr{B}}$ in two ways:
+    
+    \begin{enumerate} [(a)]
+        \item By finding $S\circ T$ directly and then computing its matrix.
+        \item By finding the matrices of $S$ and $T$ separately and using \textit{Theorem 6.27}.
+    \end{enumerate}
+    
+    \[ T: \mathscr{P}_1 \xrightarrow{} \mathscr{P}_2 \textrm{ defined by } T(p(x)) = p(x+1) \]
+    \[ S:\mathscr{P}_2 \xrightarrow{} \mathscr{P}_2 \textrm{ defined by } S(p(x)) = p(x+1) \]
+    \[ \mathscr{B} = \{1,x\}, \mathscr{C}=\mathscr{D}=\{1,x,x^2\} \]
+    
+    \end{problem}
+    \newpage
+    
+    
+    \begin{problem} [6.6 \#22]
+    Determine whether the linear transformation $T$ is invertible by considering its matrix with respect to the standard bases. If $T$ is invertible, use \textit{Theorem 6.28} and the method of \textit{Example 6.82} on page 505 to find $T^{-1}$.
+    
+    \[T:\mathscr{P}_2 \xrightarrow{} \mathscr{P}_2 \textrm{ defined by } T(p(x)) = p`(x)\]
+    
+    \end{problem}
+    \newpage
+    
+    \begin{problem} [6.6 \# 32]
+    A linear transformation $T:V\xrightarrow{} V$ is given. If possible, find a basis $\mathscr{C}$ for $V$ such that the matrix $[T]_\mathscr{C}$ of $T$ with respect to $\mathscr{C}$ is diagonal.
+    
+    \[T:\mathbb{R}^2 \xrightarrow{} \mathbb{R}^2 \text{ defined by} \] \[T\begin{bmatrix}a\\b\end{bmatrix} = \begin{bmatrix}a-b\\a+b\end{bmatrix}\]
+    
+    \end{problem}
+    \newpage
+    
+    
+    \begin{problem} [6.6 \#34]
+    A linear transformation $T:V\xrightarrow{} V$ is given. If possible, find a basis $\mathscr{C}$ for $V$ such that the matrix $[T]_\mathscr{C}$ of $T$ with respect to $\mathscr{C}$ is diagonal.
+    
+    \[T:\mathscr{P}_2 \xrightarrow{} \mathscr{P}_2 \text{ defined by} T(p(x)) = p(x+1)\]
+    \end{problem}
+    \newpage
+    
+\end{document}

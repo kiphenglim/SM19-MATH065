@@ -1,0 +1,151 @@
+\documentclass[11pt,letterpaper,boxed]{pset}
+
+\usepackage[margin=0.75in]{geometry}
+\usepackage{ulem}
+
+\name{Name: \rule{2.5cm}{0.15mm}}
+\assignment{Box \# \rule{1.5cm}{0.15mm}}
+\class{MATH065 HW8}
+\duedate{3 June 2019}
+
+\begin{document}
+
+    \problemlist{MATH065 HW8}
+    
+    \begin{problem} [Exercise 1.]
+        Consider the block diagonal matrix
+            $A = \begin{bmatrix} B & 0  \\
+            		             0 & C 
+                 \end{bmatrix},$
+        where $B$ and $C$ are square matrices (of possibly different sizes). It follows from the definition of matrix multiplication that  
+         
+        \[  A^k = \begin{bmatrix} B^k & 0 \\ 0 & C^k \end{bmatrix}  \]
+        
+        for $k \in \mathbb{N}$ (you don't need to prove this; they are invariant subspaces, or you can think about how the dot product of rows and columns play out with $0$'s outside of the blocks). Use this property of powers $A^k$ to show that  
+        
+        \[e^{At} = \begin{bmatrix} e^{B t} & 0 \\ 0 & e^{C t} \end{bmatrix}.\]
+        
+        In parlance, \textit{the matrix exponential of a block diagonal matrix is block diagonal}. This can help simplify the calculation of a matrix exponential. 
+    \end{problem}
+    \newpage
+    
+    \begin{problem} [Exercise 2.]
+        Compute $e^{At}$ where
+        
+        \[  A = \begin{bmatrix} 1 & 1 & 0 \\ -1 & 1 & 0 \\ 0 & 0 & -1 \end{bmatrix}.   \] 
+        
+        (if desired, you may use results from previous homework assignments). 
+    \end{problem}
+    \newpage
+    
+    \begin{problem} [Exercise 3.]
+        (Logarithm of a Matrix). If $B$ is a nonsingular square matrix, then the logarithm of $B$, denoted $\log B$,  is the matrix $A$ such that $e^A = B$. Let $D =  \begin{bmatrix} \lambda_1 & 0  \\ 0 & \lambda_2  \end{bmatrix}$ with $\lambda_1 \lambda_2 \neq 0$. Compute $\log D$. 
+    \end{problem}
+    \newpage
+    
+    \hrule
+    \bigskip
+        \noindent \textbf{Canonical Forms}. The next four exercises review the canonical forms for $2 \times 2$ real matrices. For all four exercises 
+        $A = \begin{bmatrix} a & b \\ c & d \end{bmatrix} $ 
+        with $a,b,c,d \in \R$. 
+    \bigskip
+    \hrule
+    
+    \begin{problem} [Exercise 4.] 
+        (Preliminaries). Let $T:\R^2 \to \R^2$ be the linear transformation defined by 
+        
+        \[ T(\mathbf{x}) = A \mathbf{x}.\]
+        
+        Show that if  $\mathcal{E} = \{\mathbf{e}_1, \mathbf{e}_2\}$ is the standard basis, then 
+        
+        \[ [T]_{\mathcal{E}} = A. \]
+        
+        That is, the matrix of $T$ with respect to the standard basis is just $A$.
+    \end{problem}
+    \newpage
+    
+    \hrule
+    \bigskip
+        \noindent Given a different basis $\mathcal{B} = \{ \mathbf{v}_1, \mathbf{v}_2 \}$ of $\R^2$,  if $P = P_{\mathcal{E} \leftarrow \mathcal{B}}$ (the change of basis matrix from $\mathcal{B}$ to $\mathcal{E}$), then we know
+        \begin{equation}
+           P^{-1} A  P  = [T]_{\mathcal{B}}
+         \label{cb}
+        \end{equation}
+        (this is Theorem 6.29 in Poole).  This allows us to calculate the similar matrix $P^{-1} A P$ not by actually finding $P$ and $P^{-1}$ and doing all the matrix multiplication for $P^{-1} A P$, but rather by just determining
+        $[T]_{\mathcal{B}}$ which, by \eqref{cb}, must be the same. This is the approach to use for the next three exercises. 
+    \bigskip
+    \hrule 
+    
+    \begin{problem} [Exercise 5.]
+        (Diagonalizable Case). Suppose $A$ has eigenvalues $\lambda_1, \lambda_2 \in \R$ with linearly independent eigenvectors $\mathbf{v}_1, \mathbf{v}_2$, respectively. Let $\mathcal{B} = \{ \mathbf{v}_1, \mathbf{v}_2 \}$ be an eigenbasis and
+        $P = P_{\mathcal{E} \leftarrow \mathcal{B}}$. Use \eqref{cb} to show that
+        \[  P^{-1} A P =  \begin{bmatrix} \lambda_1 &  0 \\ 0 & \lambda_2 \end{bmatrix}.  \]
+    \end{problem}
+    \newpage
+    
+    \begin{problem} [Exercise 6.]
+        (Deficient Case). Suppose $A$ has an eigenvalue $\lambda \in \R$ of algebraic multiplicity two but geometric multiplicity one. Let $\mathcal{B} =\{ \mathbf{v},  \mathbf{u} \}$ where $\mathbf{v}$ is an eigenvector of $A$ and $\mathbf{u}$ is a solution of the inhomogeneous equation 
+        
+        \begin{equation}
+            (A - \lambda I) \mathbf{u} = \mathbf{v}.
+            \label{g}
+        \end{equation}
+        
+        If  $P = P_{\mathcal{E} \leftarrow \mathcal{B}}$, use \eqref{cb} to show that 
+        
+        \[ P^{-1} A P = \begin{bmatrix} \lambda &  1 \\ 0 & \lambda \end{bmatrix}.  \]
+        
+        Hint: Equation \eqref{g} implies $A\mathbf{u} =  \mathbf{v} + \lambda \mathbf{u}$.
+        
+        \noindent \textbf{Note}: This is an example of a Jordan block. The vector $\mathbf{u}$ is called a \textit{generalized eigenvector}. It is not in the null space of $(A - \lambda I)$ but 
+        $(A - \lambda I)^2 \mathbf{u} = 
+        (A - \lambda I) (A - \lambda I) \mathbf{u} = (A - \lambda I) \mathbf{v} = \mathbf{0}$, 
+        so it is in the null space of  $(A - \lambda I)^2$. 
+    \end{problem}
+    \newpage
+    
+    \begin{problem} [Exercise 7] 
+    (Complex Case). Suppose $A$ has a complex eigenvalue $\lambda = \alpha +i \beta$ ($\beta \neq 0$) with an associated eigenvector $\mathbf{v} = \mathbf{p} + i \mathbf{q}$ with $\mathbf{p},\mathbf{q} \in \R^2$.  Let $\mathcal{B} = \{ \mathbf{p} ,  \mathbf{q} \} = \{\frac{\mathbf{v} + \bar{\mathbf{v}}}{2}, \frac{\mathbf{v} - \bar{\mathbf{v}}}{2i} \}$  be an associated basis for $\R^2$ and $P = P_{\mathcal{E} \leftarrow \mathcal{B}}$. Use \eqref{cb}  to show that
+    
+    \[ P^{-1} A P = \begin{bmatrix} \alpha &  \beta \\ -\beta & \alpha \end{bmatrix}.  \]
+    
+    Hint: $A\mathbf{v} = \lambda \mathbf{v} $ implies $A(\mathbf{p} + i \mathbf{q}) = (\alpha + i \beta) (\mathbf{p} + i\mathbf{q})$. Expand each side and equate real and imaginary parts to determine $A\mathbf{p}$ and $A\mathbf{q}$. 
+    \end{problem}
+    
+    \bigskip
+    \hrule
+    \bigskip
+    \noindent Note: It follows that any $2 \times 2$ matrix is similar to one of these \textit{canonical forms}. In particular, any $2 \times 2$ system of DEs  is, up to a change of basis, one of these three canonical matrices and its matrix exponential is similar to the exponential of one of these canonical matrices. Change of basis is a powerful tool!
+    \bigskip
+    \hrule
+    \newpage
+    
+    \begin{problem} [Exercise 8.]
+        Consider the inhomogeneous linear system
+        
+        \begin{equation}
+            \mathbf{x} ' = A \, \mathbf{x} + \mathbf{g}(t)
+            \label{ls1}
+        \end{equation}
+        
+        where $A \in M_{nn}(\R)$ and $\mathbf{g}:\R \to \R^n$ is a forcing term. 
+        
+        \begin{enumerate}
+            \item  If $\mathbf{x}_p$ and $\mathbf{x}_q$ are any two solutions of the inhomogeneous system \eqref{ls1}, show that their sum $\mathbf{x}_p + \mathbf{x}_q$ is \textit{not} a solution of  \eqref{ls1}. This is your friendly DEs reminder that solutions of inhomogeneous equations do not form a vector space.
+            \item Suppose $\mathbf{x}_p$ is a particular solution of \eqref{ls1} and $\{  \mathbf{x}_1, \ldots, \mathbf{x}_n \}$ is a basis for the vector space of solutions to the associated homogeneous system $\mathbf{x} ' = A \, \mathbf{x}$. Show that if $\mathbf{x}_q$ is any other solution of the inhomogeneous equation \eqref{ls1}, then there must exist constants $c_1, \ldots, c_n$ such that 
+            \begin{equation}
+                \mathbf{x}_q(t) = c_1  \mathbf{x}_1(t) + \cdots +  c_n  \mathbf{x}_n(t)  +   \mathbf{x}_p(t).
+                \label{one}
+            \end{equation}
+            Hint: Consider the difference $\mathbf{x}_q(t) - \mathbf{x}_p(t)$. What differential equation does this difference satisfy? 
+        \end{enumerate}
+    \end{problem}
+    
+    \bigskip  
+    \hrule
+    \bigskip
+    \noindent Note: This exercise is a DE example of the general phenomenon that it is sufficient to know \textit{one} solution of an inhomogeneous linear equation to know \textit{all} solutions, up to something in the kernel (null space). In this case, the linear operator is $L\mathbf{x} = \mathbf{x}' - A\mathbf{x}$ whose kernel  $L\mathbf{x} = \mathbf{0}$ is the space of solutions to the homogenous system $\mathbf{x} ' = A \, \mathbf{x}$. Therefore one particular solution of $L\mathbf{x} = \mathbf{g}$ determines all solutions, up to something in the kernel. This  is what \eqref{one} expresses, since given one particular solution $\mathbf{x}_p(t)$ we know any other solution $\mathbf{x}_q(t)$ differs from $\mathbf{x}_p(t)$ only by something in the kernel. You saw this in Math 45 too, which is why you spent time focusing on techniques to determine any particular solution (e.g., undetermined coefficients or variation of parameters). We will take up the case of inhomogeneous solutions to systems on Monday!
+    \bigskip
+    \hrule
+
+\end{document}

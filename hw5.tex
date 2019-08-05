@@ -1,0 +1,146 @@
+\documentclass[11pt,letterpaper,boxed]{pset}
+
+\usepackage[margin=0.75in]{geometry}
+\usepackage{ulem}
+
+\name{Name: \rule{2.5cm}{0.15mm}}
+\assignment{Box \# \rule{1.5cm}{0.15mm}}
+\class{MATH065 HW5}
+
+\begin{document}
+
+    \problemlist{MATH065 HW5}
+    \begin{center}
+    	 5.3: 4, 6, 18 \\
+    	 7.1: 32, 34, 38, 40, 42
+    \end{center}
+    
+    \begin{problem} [5.3 \#4]
+    	The give vectors form a basis for $\mathbb{R}^3$ or $\mathbb{R}^4$. Apply the Gram-Schmidt Process to obtain an orthogonal basis. Then normalise this basis to obtain an orthonormal basis.
+    
+    	\[  \textbf{x}_1=\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix},
+    		\textbf{x}_2=\begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix},
+    		\textbf{x}_3=\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix} \]
+    
+    \end{problem}
+    \begin{solution}
+    \vspace{\fill}
+    \end{solution}
+    \clearpage
+    
+    
+    \begin{problem} [5.3 \#6]
+    	The given vector form a basis for a subspace $W$ of  $\mathbb{R}^3$ or $\mathbb{R}^4$. Apply the Gram-Schmidt Process to obtain an orthogonal basis for $W$.
+    
+    	\[  \textbf{x}_1=\begin{bmatrix} 2 \\ -1 \\ 1 \\ 2 \end{bmatrix},
+    		\textbf{x}_2=\begin{bmatrix} 3 \\ -1 \\ 0 \\ 4 \end{bmatrix},
+    		\textbf{x}_3=\begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix}  \]
+    
+    \end{problem}
+    \begin{solution}
+    \vspace{\fill}
+    \end{solution}
+    \clearpage
+    
+    
+    \begin{problem} [5.3 \#18]
+    	The columns of $Q$ were obtained by applying the Gram-Schmidt Process to the columns of $A$. Find the upper triangular matrix $R$ such that $A=QR$.
+    
+    	\[A=\begin{bmatrix} 1  &  3 \\ 
+    						2  &  4 \\
+    						-1 & -1 \\
+    						0  &  1
+    		\end{bmatrix},
+    		Q=\begin{bmatrix}   1/\sqrt 6  & 1/\sqrt 3 \\
+    							2/\sqrt 6  & 0 \\
+    							-1/\sqrt 6 & 1/\sqrt 3 \\
+    							0          & 1/\sqrt 3
+    		\end{bmatrix} \]
+    
+    \end{problem}
+    \begin{solution}
+    \vspace{\fill}
+    \end{solution}
+    \clearpage
+    
+    
+    \begin{problem} [7.1 \#32]
+    	$\langle \textbf{u}, \textbf{v} \rangle$ is an inner product. Prove that the given statement is an identity.
+    
+    	\[||\textbf{u} + \textbf{v}^2|| = ||\textbf{u}||^2
+    		+ 2\langle \textbf{u}, \textbf{v} \rangle
+    		+ ||\textbf{v}||^2 \]
+    
+    \end{problem}
+    \begin{solution}
+    \vspace{\fill}
+    \end{solution}
+    \clearpage
+    
+    
+    \begin{problem} [7.1 \#34]
+    	$\langle \textbf{u}, \textbf{v} \rangle$ is an inner product. Prove that the given statement is an identity.
+    
+    	\[ \langle \textbf{u}, \textbf{v} \rangle = 
+    	    \frac{1}{4}||\textbf{u} + \textbf{v}||^2 
+    	    - \frac{1}{4} ||\textbf{u} - \textbf{v}||^2 \]
+    
+    \end{problem}
+    \begin{solution}
+    \vspace{\fill}
+    \end{solution}
+    \clearpage 
+    
+    
+    \begin{problem} [7.1 \#38]
+    	Apply the Gram-Schmidt Process to the basis $\mathscr{B}$ to obtain an orthogonal basis for the inner product space $V$ relative to the given inner product.
+    
+    	\[ V= \mathbb{R}^2, \mathscr{B} = 
+    		\{\begin{bmatrix} 1 \\ 0 \end{bmatrix}, 
+    		\begin{bmatrix} 1 \\ 1 \end{bmatrix} \},
+    	\text{ and } 
+    	\langle \textbf{u}, \textbf{v} \rangle = 
+    	    \textbf{u}^T A\textbf{u} \]
+    
+    \end{problem}
+    \begin{solution}
+    \vspace{\fill}
+    \end{solution}
+    \clearpage 
+    
+    
+    \begin{problem} [7.1 \#40]
+    	Apply the Gram-Schmidt Process to the basis $\mathscr{B}$ to obtain an orthogonal basis for the inner product space $V$ relative to the given inner product.
+    
+    	\[ V=\mathscr{P}_2[0,1], \mathscr{B} = \{1,1+x,1+x+x^2\}, \text{ and }
+    		\langle f, g \rangle = \int_0^1 f(x)g(x) dx \]
+    
+    \end{problem}
+    \begin{solution}
+    \vspace{\fill}
+    \end{solution}
+    \clearpage 
+    
+    
+    \begin{problem} [7.1 \#42]
+    	If we multiply the Legendre polynomial of degree $n$ by an appropriate scalar we can obtain a polynomial $L_n(x)$ such that $L_n(1) = 1$.
+    	
+    	\begin{enumerate} [(a)]
+    	    \item Find $L_0(x),L_1(x),L_2(x),$ and $L_3(x)$.
+    	    \item It can be shown that $L_n(x)$ satisfies the recurrence relation
+    	    
+    	    \[ L_n(x) = \frac{2n - 1}{n}xL_{n-1}(x) - \frac{n-1}{n}L_{n-2}(x) \]
+    
+    		for all $n \geq 2$. Verify this recurrence for $L_2(x)$ and $L_3(x)$. Then use it to compute $L_4(x)$ and $L_5(x)$.
+    	\end{enumerate}
+    	
+    	Note: The first three Legendre polynomials are \{$1, x, x^2 - \frac{1}{3}$\}.
+    	
+    \end{problem}
+    \begin{solution}
+    \vspace{\fill}
+    
+    \end{solution}
+    \clearpage 
+    
+\end{document}

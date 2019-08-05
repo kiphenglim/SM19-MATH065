@@ -1,0 +1,121 @@
+\documentclass[11pt,letterpaper,boxed]{pset}
+
+\usepackage[margin=0.75in]{geometry}
+\usepackage{ulem}
+
+\name{Name: \rule{2.5cm}{0.15mm}}
+\assignment{Box \# \rule{1.5cm}{0.15mm}}
+\class{MATH065 HW7}
+
+\begin{document}
+
+    \problemlist{MATH065 HW7}
+    
+    \begin{problem} [Exercise 1.]
+        \begin{enumerate} [(a)]
+            \item Suppose $A$ is a $2 \times 2$ matrix with the following eigendata:
+             \[ \lambda_1 = -1, \, \mathbf{v}_1=  \begin{bmatrix} 1 \\ 0 \end{bmatrix}
+             \qquad \lambda_2=2, \, \mathbf{v}_2=  \begin{bmatrix} 1 \\ 1 \end{bmatrix}. \]
+            Use the given eigendata to provide a qualitative sketch of the phase portrait for the associated linear system $\mathbf{x}' = A \, \mathbf{x}$.  Use arrows on your solutions (orbits) to indicate the direction of motion with increasing time. 
+            \item Suppose $B$ is a matrix similar to $A$ (i.e., $B=P^{-1} A P$ for some invertible matrix $P$). How could the phase portrait for $\mathbf{x}' = B \, \mathbf{x}$ change? 
+        \end{enumerate}
+    \end{problem}
+    \newpage
+    
+    \begin{problem} [Exercise 2.]
+        \begin{enumerate} [(a)]
+            \item Let $ M = \begin{bmatrix} 0 & q \\ -q & 0  \end{bmatrix}.$ 
+            Carefully compute the first few powers of $M$ (up to $M^5$) in order to use the power series definition  to show $e^{Mt}$ is the clockwise $qt$-rotation matrix
+            
+            \[ e^{Mt} =  \begin{bmatrix} \cos qt & \sin qt \\ - \sin qt & \cos qt \end{bmatrix}. \]
+            
+            \item[(b)] By part (a)  it follows the solution to the IVP
+                \begin{eqnarray}
+                \dot{x} &= &  y  \\
+                \dot{y} & = & - x
+                \end{eqnarray}
+            with initial condition $\mathbf{x}_0$ is 
+            
+            \[  \mathbf{x}(t) = e^{Mt} \mathbf{x}_0 = \begin{bmatrix} \cos t & \sin t \\ - \sin t & \cos t \end{bmatrix}\mathbf{x}_0.  \]
+            
+            Use this to sketch the phase portrait. Use arrows on your solutions (orbits) to indicate the direction of motion with increasing time. 
+        \end{enumerate}
+    \end{problem}
+    \newpage
+    
+    \begin{problem} [Exercise 3.]
+        In this example we show that the beloved property $e^{a+b} = e^a e^b$ does not extend  to matrices (Womp womp). Let $A = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}$ and $B = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$.
+        
+        \begin{enumerate}
+            \item[(a)] Show $AB \neq BA$. 
+            \item[(b)] Use the power series definition to compute $e^{At}$, $e^{Bt}$, and $e^{(A+B)t}$.
+            \item[(c)] Show $e^{(A+B)t} \neq e^{At} e^{Bt}.$
+        \end{enumerate}
+        
+        \textbf{Note}: The good news is that \textit{if} $AB = BA$ then $e^{At+Bt} = e^{At} e^{Bt} = e^{Bt} e^{At}$ (Yay!). \textbf{You can freely use this fact when needed in this course, including in the next few exercises where it will come in handy!} You just have to show the matrices involved commute to use this property. 
+    \end{problem}
+    \newpage
+    
+    \begin{problem} [Exercise 4.]
+        Let 
+            $A = \begin{bmatrix} 1 & 1  \\ -1 & 1 \end{bmatrix}.$
+        
+        \begin{enumerate} [(a)]
+            \item Compute $e^{At}$ by first expressing $A$  in the form  $A = I + M$ for some matrix $M$.  
+            \item Solve the initial-value problems $\mathbf{x}' = A \, \mathbf{x}$ with initial states $\mathbf{x}(0)=  \begin{bmatrix} 1 \\ 2 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \end{bmatrix}$ and $\begin{bmatrix} \pi \\ e \end{bmatrix}$. 
+        \end{enumerate}
+        
+        \textbf{Note: } Part (b) illustrates an advantage for computing $e^{At}$ when solving IVPs: to solve an IVP we only need to left multiply the initial condition by $e^{At}$. For the cost of a one time calculation of the matrix exponential we gain \textit{all} solutions of IVPs without needing to worry about determining $c_1$ and $c_2$, and so on. 
+    \end{problem}
+    \newpage
+    
+    
+    \begin{problem} [Exercise 5.]
+        Compute the matrix exponential for the system
+        
+        \begin{equation}
+            \mathbf{x} \, ' = \begin{bmatrix} \alpha & 1 \\ -1 & \alpha \end{bmatrix} \mathbf{x},\label{if2}
+        \end{equation}
+         
+        where $\alpha \in \R$ is a parameter.
+    \end{problem}
+    \newpage
+    
+    
+    \begin{problem} [Exercise 6.]
+        Consider the initial-value problem for the system \eqref{if2} in Exercise 5 with initial state $\mathbf{x}(0)=\mathbf{x}_0$.
+        
+        \begin{enumerate} [(a)]
+            \item We know the solution of the IVP has the form $\mathbf{x}(t) =e^{At} \, \mathbf{x}_0$. Show that this can be expressed in the form $\mathbf{x}(t) = e^{\alpha t} R(t) \mathbf{x}_0$ where $R(t)$ is a (clockwise) rotation matrix. This shows directly how the matrix exponential flows the initial state by a combination of rotation (by $R(t)$) and dilation from the $e^{\alpha t}$ scaling factor (expansion when $\alpha > 0$ or contraction when $\alpha < 0$).
+            \item Provide a qualitative sketch for the phase portrait in each case  $\alpha < 0$, $\alpha > 0$, or $\alpha = 0$.  
+        \end{enumerate}
+    \end{problem}
+    \newpage
+    
+    \begin{problem} [Exercise 7.]
+        (Jordan Block). Compute the matrix exponential for the system
+        
+        \begin{equation}
+            \mathbf{x} \, ' = \begin{bmatrix} a & 1 \\ 0 & a \end{bmatrix} \mathbf{x},\label{if}
+        \end{equation}
+        
+        where $a \in \R$. Hint: $A=aI + N$ for some matrix $N$. What is $N^2$? \\
+        
+        \textbf{Note}: This is an example where the matrix is not diagonalizable ($a$ is an eigenvalue of algebraic multiplicity $2$ but geometric multiplicity $1$), so the ansatz method from yesterday's homework does not produce a basis for the solution space, but now with $e^{At}$ we're all good! 
+    \end{problem}
+    \newpage
+    
+    \begin{problem} [Exercise 8.]
+        (Using similarity to compute $e^{At}$). Consider the matrix 
+        $ A = \begin{bmatrix} 0 & 1  \\ 9 & 0 \end{bmatrix}. $ 
+        
+        \begin{enumerate} [(a)]
+            \item Show that $A$ is diagonalizable and determine a matrix $P$ such that $P^{-1} A P = D$.
+            \item Use your result from part (a) to compute the matrix exponential $e^{At}$.
+        \end{enumerate}
+        
+        Simplify your answer by using our hyperbolic friends $\cosh x = \frac{e^x + e^{-x}}{2}$ and $\sinh x = \frac{e^x - e^{-x}}{2}$.
+    \end{problem}
+    \newpage
+
+\end{document}
